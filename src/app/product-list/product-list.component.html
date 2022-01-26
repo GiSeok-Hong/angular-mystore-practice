@@ -1,18 +1,20 @@
 <h2>Products</h2>
 
 <!-- *ngFor를 사용하면 목록에 있는 개별 상품마다 <div> 엘리먼트를 반복할 수 있다. -->
-<div *ngFor="let product of products">
+<div *ngFor="let product123 of products">
   <h3>
     상품 이름 :
-    <a [title]="'Go to ' + product.name + ' Details'">
-      {{ product.name }}
+    <a [title]="'Go to ' + product123.name + ' Details'">
+      {{ product123.name }}
     </a>
   </h3>
 
   <!-- *ngIf 디렉티브를 추가하면 상품 설명이 존재할 때 이 생품의 설명을 DOM에 추가할 수 있다
        3번째 상품은 상품 설명이 없기 때문에 <p> 엘리먼트가 생성되지 않는다.
   -->
-  <p *ngIf="product.description">설명 : {{ product.description }}</p>
+  <p *ngIf="product123.description">설명 : {{ product123.description }}</p>
 
   <button (click)="share()">공유하기</button>
+
+  <app-product-alerts [productHello]="product123"></app-product-alerts>
 </div>
