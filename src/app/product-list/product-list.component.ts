@@ -13,4 +13,8 @@ export class ProductListComponent {
   share() {
     window.alert('The product has been shared!');
   }
+
+  onNotify() {
+    window.alert('상품이 세일하면 고객님에게 알리겠습니다')
+  }
 }

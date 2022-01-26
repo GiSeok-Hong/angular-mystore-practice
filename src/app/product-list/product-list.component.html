@@ -16,5 +16,8 @@
 
   <button (click)="share()">공유하기</button>
 
-  <app-product-alerts [productHello]="product123"></app-product-alerts>
+  <app-product-alerts
+    [productHello]="product123"
+    (notify)="onNotify()"
+  ></app-product-alerts>
 </div>
