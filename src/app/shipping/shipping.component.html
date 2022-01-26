@@ -1,0 +1,10 @@
+<h3>배송 가격 - Shipping Prices</h3>
+
+<!-- 
+  async 파이프는 스트림으로 전달된 데이터의 마지막 값을 반환하며, 이 동작은 컴포넌트가 존재하는 동안 계속 실행된다.
+  그리고 Angular가 컴포넌트를 종료하면 async 파이프도 함께 자동으로 종료된다.
+-->
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+  <span>배송 타입 : {{ shipping.type }}</span>
+  <span>배송 가격 : {{ shipping.price | currency }}</span>
+</div>

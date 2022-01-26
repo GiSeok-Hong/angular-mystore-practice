@@ -13,6 +13,8 @@ import { CartComponent } from './cart/cart.component';
 // Angular HttpClientModule 을 등록하면 애플리케이션 전역에서 HttpClient 서비스를 자유롭게 활용할 수 있다.
 import { HttpClientModule } from '@angular/common/http';
 
+import { ShippingComponent } from './shipping/shipping.component';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -22,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
+      { path: 'shipping', component: ShippingComponent },
     ]),
   ],
   declarations: [
@@ -31,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
+    ShippingComponent,
   ],
   bootstrap: [AppComponent],
 })
