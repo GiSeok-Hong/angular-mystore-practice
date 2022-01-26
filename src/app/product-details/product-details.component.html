@@ -1,1 +1,8 @@
-<p>하이하이하이</p>
+<h2>상품 상세페이지</h2>
+
+<!-- 현재 상품이 존재할 때만 <div> 엘리먼트가 렌더링된다. -->
+<div *ngIf="product">
+  <h3>{{ product.name }}</h3>
+  <h4>{{ product.price | currency }}</h4>
+  <p>{{ product.description }}</p>
+</div>
