@@ -2,7 +2,8 @@
 
 <!-- 현재 상품이 존재할 때만 <div> 엘리먼트가 렌더링된다. -->
 <div *ngIf="product">
-  <h3>{{ product.name }}</h3>
-  <h4>{{ product.price | currency }}</h4>
-  <p>{{ product.description }}</p>
+  <h3>상품명 : {{ product.name }}</h3>
+  <h4>상품 가격 : {{ product.price | currency }}</h4>
+  <p>상품 설명 : {{ product.description }}</p>
+  <button (click)="addToCart(product)">구매하기</button>
 </div>
