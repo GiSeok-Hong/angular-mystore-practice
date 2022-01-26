@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Product } from './products';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
+  constructor(
+    // HttpClient 를 CartService constructor()에 의존성으로 주입
+    private http: HttpClient
+  ) {}
+
   // items 프로퍼티 정의. 이 프로퍼티는 장바구니에 담긴 상품을 저장하는 배열이다.
   items: Product[] = [];
 
@@ -24,5 +30,10 @@ export class CartService {
     return this.items;
   }
 
-  constructor() {}
+  // shipping.json 파일에 있는 배송가격 데이터를 불러오는 메서드.  HttpClient get() 메서드를 통해 불러온다.
+  getShippingPrices() {
+    return this.http.get<{ type: string; price: number }[]>(
+      '/assets/shipping.json'
+    );
+  }
 }

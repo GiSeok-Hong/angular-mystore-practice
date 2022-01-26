@@ -2,5 +2,5 @@
 
 <div class="cart-item" *ngFor="let item of items">
   <span>상품명 : {{ item.name }} </span>
-  <span>상품가격 : {{ item.price }}</span>
+  <span>상품가격 : {{ item.price | currency }}</span>
 </div>
