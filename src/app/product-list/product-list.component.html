@@ -4,7 +4,10 @@
 <div *ngFor="let product123 of products">
   <h3>
     상품 이름 :
-    <a [title]="'Go to ' + product123.name + ' Details'">
+    <a
+      [title]="'Go to ' + product123.name + ' Details'"
+      [routerLink]="['/products', product123.id]"
+    >
       {{ product123.name }}
     </a>
   </h3>
