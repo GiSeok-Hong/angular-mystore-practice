@@ -1,4 +1,4 @@
-# angular-x5pxcp
+# angular
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-x5pxcp)
 
